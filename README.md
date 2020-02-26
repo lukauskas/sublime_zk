@@ -1,3 +1,5 @@
+This particular version is my fork of the plugin which changes the colour scheme and default config to my liking.
+
 # Sublime ZK
 
 This is a plugin for SublimeText3 to enable ID-based, Wiki-style links, and #tags in your documents.
