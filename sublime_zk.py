@@ -25,6 +25,7 @@ from collections import Counter
 from operator import itemgetter
 import base64
 import urllib.request
+import sys
 
 
 class ZkConstants:
@@ -633,16 +634,18 @@ class Autobib:
 
     @staticmethod
     def run(pandoc_bin, bibfile, stdin):
+
         args = [pandoc_bin, '-t', 'plain', '--bibliography', bibfile]
+
         # using universal_newlines here gets us into decoding troubles as the
         # encoding then is guessed and can be ascii which can't deal with
         # unicode characters. hence, we handle \r ourselves
-        p = Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE)
+        p = Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=False)
         stdout, stderr = p.communicate(bytes(stdin, 'utf-8'))
         # make me windows-safe
         stdout = stdout.decode('utf-8', errors='ignore').replace('\r', '')
         stderr = stderr.decode('utf-8', errors='ignore').replace('\r', '')
-        # print('pandoc says:', stderr)
+        #print('pandoc says:', stderr)
         return stdout
 
 
@@ -2083,7 +2086,7 @@ class ZkAutoBibCommand(sublime_plugin.TextCommand):
         if bibfile:
             text = self.view.substr(sublime.Region(0, self.view.size()))
             ck2bib = Autobib.create_bibliography(
-                text, bibfile, pandoc='pandoc')
+                text, bibfile, pandoc=settings.get('path_to_pandoc', 'pandoc'))
             marker = '<!-- references (auto)'
             marker_line = marker
             if mmd_style:

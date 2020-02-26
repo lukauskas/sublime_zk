@@ -34,10 +34,12 @@
 
     // fall-back: location of ag if it cannot be found in the PATH
     "path_to_ag": "/usr/local/bin/ag",
+    // fall-back: location of pandoc if it cannot be found in PATH
+    "path_to_pandoc": "/usr/local/bin/pandoc",
 
     // for auto-completion of citekeys and auto-bibs
     // enter the full path to your .bib file here
-    "bibfile": "/path/to/zotero.bib",
+    "bibfile": "bibliography/latest.bib",
 
     // make sure images don't get too large
     // scale them to max_width, proportionally
@@ -81,4 +83,6 @@
 
     // set to true to enable super awesome zettelkasten mode
     "zettelkasten_mode" : true,
+
+    "color_scheme": "Packages/sublime_zk/Alabaster-BG-ZK.sublime-color-scheme",
 }
