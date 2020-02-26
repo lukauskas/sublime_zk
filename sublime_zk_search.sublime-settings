@@ -1,11 +1,11 @@
 {
-    "color_scheme": "Packages/sublime_zk/zk-mode/sublime_zk_search.tmTheme",
+    "color_scheme": "Packages/sublime_zk/zk-mode/sublime_zk_search.sublime-color-scheme",
     "extensions":
     [
         "zks"
     ],
     //"font_face": "consolas",
-    "font_size": 10,
+    "font_size": 12,
 	"line_numbers": false,
  	"gutter": false,
  	"word_wrap": true,

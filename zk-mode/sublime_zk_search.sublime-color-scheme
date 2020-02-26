@@ -204,5 +204,17 @@
              "scope": "markup.table",
              "background": "var(red)",
          },
+         {
+             "name": "Markup: Zettelkasten search name",
+             "scope": "markup.zettel.search.name",
+             "font_style": "italic bold"
+         },
+         {
+             "name": "Markup: Zettelkasten search spec",
+             "scope": "markup.zettel.search.spec",
+             //"foreground": "var(black)",
+             "background": "var(green)",
+             "font_style": "italic"
+         },
     ]
 }
