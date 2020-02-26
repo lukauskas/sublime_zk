@@ -15,7 +15,8 @@
         "magenta":    "#F9E0FF",
         "yellow":     "#FFFABC",
         "orange":     "#FFBC5D",
-        "light_gray": "#fbfbfb",
+        "light_gray": "#f1f1f1",
+        "lighter_gray": "#fbfbfb",
         "white":      "#ffffff",
     },
     "globals":
@@ -100,7 +101,7 @@
          {
              "name": "Markup: raw inline",
              "scope": "text.html.markdown markup.raw.inline",
-             "foreground": "var(dark_red)"
+             "background": "var(light_gray)"
          },
          {
              "name": "Markdown: linebreak",
@@ -170,7 +171,7 @@
          {
              "name": "Markup: Raw block",
              "scope": "markup.raw.block",
-             //"background": "var(yellow)"
+             "background": "var(lighter_gray)"
          },
          {
              "name": "Markdown: List Items Punctuation",
@@ -180,12 +181,12 @@
          {
              "name": "Markdown: Raw Block fenced",
              "scope": "markup.raw.block.fenced.markdown",
-             "background": "var(light_gray)"
+             "background": "var(lighter_gray)"
          },
          {
              "name": "Markdown: Fenced Bode Block",
              "scope": "punctuation.definition.fenced.markdown, variable.language.fenced.markdown",
-             "background": "var(light_gray)"
+             "background": "var(lighter_gray)"
          },
          {
              "name": "Markdown: Fenced Language",
