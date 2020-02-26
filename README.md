@@ -62,11 +62,8 @@ See the [Usage](#usage) section below to see how this package might support your
     * [New Note templates](#new-note-templates)
     * [Highlight references to other notes](#highlight-references-to-other-notes)
     * [Syntax Coloring for #tags, footnotes, and pandoc references](#syntax-coloring-for-tags-footnotes-and-pandoc-references)
+        * [Alabaster - BG Color Scheme](#alabaster-bg-color-scheme)
         * [Monokai Extended Color Scheme](#monokai-extended-color-scheme)
-        * [Solarized Color Scheme](#solarized-color-scheme)
-        * [Commodore 64 Color Scheme](#commodore-64-color-scheme)
-        * [Honorable Mention: Zettel Coffee Color Scheme](#honorable-mention-zettel-coffee-color-scheme)
-        * [Rolling your own Color Scheme](#rolling-your-own-color-scheme)
     * [Configuring SublimeText's line spacing](#configuring-sublimetexts-line-spacing)
     * [Location of your .bib file](#location-of-your-bib-file)
     * [Citation Reference Style](#citation-reference-style)
@@ -361,6 +358,12 @@ To enable highlighting of #tags, footnotes, and pandoc references in your newly 
 
 **DISCLAIMER:** As of 2018-05-07 evening, this package had to incorporate pretty much the entire [MarkdownExtended](https://github.com/jonschlinkert/sublime-markdown-extended) syntax from Jon Schlinkert. This was necessary because SublimeText build 3170 would not accept the previous syntax definition _(that just referenced any existing Markdown syntax)._
 
+#### Alabaster - BG Color Scheme
+
+```json
+    "color_scheme": "Packages/sublime_zk/Alabaster-BG-ZK.sublime-color-scheme",
+```
+
 #### Monokai Extended Color Scheme
 
 ![default](https://user-images.githubusercontent.com/30892199/32641875-b241e6fa-c5d0-11e7-819a-4705396f633b.png)
@@ -372,127 +375,7 @@ The _Monokai Extended - Zettelkasten_ color scheme is used for illustrations in 
 To enable this color scheme for (just) your Zettelkasten notes automatically, stick the following into the `sublime_zk.sublime-settings`:
 
 ```json
-    "color_scheme": "Packages/sublime_zk/Monokai Extended-zk.tmTheme",
-```
-
-#### Solarized Color Scheme
-
-![solarized](https://user-images.githubusercontent.com/30892199/38279419-7f1219e8-37a0-11e8-80e2-9ec9dd17f3a3.png)
-
-This color scheme is installed under the name `Solarized (Light)-ZK`.
-
-If you want the best Solarized aesthetics, [download](https://assets.ubuntu.com/v1/fad7939b-ubuntu-font-family-0.83.zip) the [Ubuntu Mono](https://design.ubuntu.com/font/) fonts and install the following 4 by double-clicking them:
-
-* `UbuntuMono-R.ttf`
-* `UbuntuMono-RI.ttf`
-* `UbuntuMono-B.ttf`
-* `UbuntuMono-BI.ttf`
-
-and then experiment with these settings in `sublime_zk.sublime-settings`:
-
-```json
-    // Solarized like The Archive
-    "font_face": "Ubuntu Mono",
-    "color_scheme": "Packages/sublime_zk/Solarized (Light) - ZK.tmTheme",
-    "font_size": 16,
-    "line_padding_bottom": 4,
-    "line_padding_top": 4,
-    "line_numbers": false,
-    "gutter": true,
-    "margin": 60,
-```
-
-
-#### Commodore 64 Color Scheme
-
-If you know what a Commodore 64 is, you might enjoy this theme :smile:
-
-![c64](https://user-images.githubusercontent.com/30892199/38334682-49ee899c-385c-11e8-8a60-d3be99609f10.png)
-
-For a perfect C64 experience, [download](http://style64.org/file/C64_TrueType_v1.2-STYLE.zip) the [best C64 True Type Font](http://style64.org/release/c64-truetype-v1.2-style), unzip it, and install the `C64 Pro Mono.ttf` by double clicking it.
-
-I used the following `sublime_zk.sublime-settings` for the screen-shot:
-
-```json
-    "font_face": "C64 Pro Mono",     // only if you have them installed
-    "color_scheme": "Packages/sublime_zk/C64-ZK.tmTheme",
-    "font_size": 12,
-    "line_padding_bottom": 4,
-    "line_padding_top": 4,
-    "line_numbers": false,
-    "gutter": true,
-    "margin": 80,
-    "wrap_width": 80,
-```
-
-
-#### Honorable Mention: Zettel Coffee Color Scheme
-
-![zettelcoffee](https://forum.zettelkasten.de/uploads/editor/xa/ogkjlnccbv5m.png)
-
-If you're interested in a color scheme that attempts to resemble the nvALT scheme, then check out [Zettel Coffee](https://forum.zettelkasten.de/discussion/comment/1214/#Comment_1214).
-
-
-
-#### Rolling your own Color Scheme
-
-If you want to use your own color scheme, you have to tweak it manually:
-
-* Google is your friend - make a copy of your existing color scheme
-* Add the following to your new color scheme
-* (Tweak the HTML color codes)
-
-```xml
-    <dict>
-      <key>name</key>
-      <string>Markup: Zettelkasten note link</string>
-      <key>scope</key>
-      <string>markup.zettel.link</string>
-      <key>settings</key>
-      <dict>
-        <key>fontStyle</key>
-        <string>underline</string>
-        <key>foreground</key>
-        <string>#7a9aff</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>name</key>
-      <string>Markup: Zettelkasten note link title</string>
-      <key>scope</key>
-      <string>markup.zettel.linktitle</string>
-      <key>settings</key>
-      <dict>
-        <key>fontStyle</key>
-        <string>underline</string>
-        <key>foreground</key>
-        <string>#7a9aff</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>name</key>
-      <string>Markup: Zettelkasten tag</string>
-      <key>scope</key>
-      <string>markup.zettel.tag</string>
-      <key>settings</key>
-      <dict>
-        <key>fontStyle</key>
-        <string>italic</string>
-        <key>foreground</key>
-        <string>#e42e70</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>name</key>
-      <string>Markup: Zettelkasten Image attrs in image link</string>
-      <key>scope</key>
-      <string>meta.image.inline.markdown.imageattr</string>
-      <key>settings</key>
-      <dict>
-        <key>foreground</key>
-        <string>#F0E68C</string>
-      </dict>
-    </dict>
+    "color_scheme": "Packages/sublime_zk/Monokai Extended - Zettelkasten.sublime-color-scheme",
 ```
 
 ### Configuring SublimeText's line spacing
@@ -1385,7 +1268,3 @@ While we're at it, I highly recommend the following books (German); Google and A
 
 * "Das Zettelkastenprinzip" / "How to take smart notes" [(more info here...)](http://takesmartnotes.com/#moreinfo) will blow your mind.
 * "Die Zettelkastenmethode" from Sascha over at zettelkasten.de will also blow your mind and expand on the plain-text approach of using a digital Zettelkasten.
-
-
-
-
