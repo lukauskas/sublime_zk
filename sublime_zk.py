@@ -645,7 +645,7 @@ class Autobib:
         # make me windows-safe
         stdout = stdout.decode('utf-8', errors='ignore').replace('\r', '')
         stderr = stderr.decode('utf-8', errors='ignore').replace('\r', '')
-        #print('pandoc says:', stderr)
+        print('pandoc says:', stderr)
         return stdout
 
 
